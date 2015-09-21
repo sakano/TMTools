@@ -1,0 +1,27 @@
+﻿<Window x:Class="TMResultReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TMResultReader" Height="250" Width="400">
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        
+        <Menu Grid.Row="0">
+            <MenuItem Name="latestReadMenuItem" Header="最新読み上げ(_L)" Click="latestReadMenuItem_Click" />
+            <MenuItem Name="readMenuItem" Header="読み上げ(_S)" Click="readMenuItem_Click" />
+            <TextBox Name="gameIDTextBox" Width="60" />
+        </Menu>
+        
+        <TextBox Grid.Row="1" Name="resultTextBox" TextWrapping="NoWrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="2"/>
+
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock Name="statusBarText" />
+            </StatusBarItem>
+        </StatusBar>
+
+    </Grid>
+</Window>
